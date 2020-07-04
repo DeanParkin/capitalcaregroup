@@ -1,0 +1,258 @@
+// @package Davenports
+//sass --watch sass:css --style compressed
+//#########################################
+//Pallete
+//#########################################
+//color stash
+//
+//=========================================
+//Main Pallete
+
+$onyx: #333333;
+
+//=========================================
+//Main fonts
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+$mainFont: 'Noto Sans', sans-serif;
+
+
+//#########################################
+// Mixins
+//#########################################
+@mixin animate ($attr, $time) {
+  -webkit-transition: $attr $time ease;
+  -moz-transition: $attr $time ease;
+  -ms-transition: $attr $time ease;
+  -o-transition: $attr $time ease;
+  transition: $attr $time ease;
+}
+@mixin transform ($value) {
+  -webkit-transform: $value;
+  -moz-transform: $value;
+  -ms-transform: $value;
+  -o-transform: $value;
+  transform: $value;
+}
+
+
+@keyframes slideInFromtop {
+  0% {
+    transform: translateY(-120%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+//#########################################
+// Global
+//#########################################
+
+
+header {
+  font-family: $mainFont
+}
+
+
+
+
+//#########################################
+// Header
+//#########################################
+
+//=========================================
+//Top Nav
+
+#topNav {
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto 1rem auto;
+}
+@media (max-width: 991px) {
+  #topNav {
+    display: none;
+  }
+}
+
+.social-links {
+  width: 10rem;
+  min-height: .5rem;
+  display: flex;
+}
+
+.social-links svg {
+  width: 1.5rem;
+  & path {
+    fill: #5a5a5a;
+  }
+}
+
+.social-links a {
+  margin: 0 auto;
+  opacity: 0.6;
+  @include animate(opacity, 600ms);
+}
+
+.social-links a:hover {
+  opacity: 1;
+  @include animate(opacity, 600ms);
+}
+
+.top-nav-link {
+  opacity: 0.6;
+  color: #1a1a1a;
+  display: inline-block;
+  font-size: 1.25rem;
+  margin: 0 1rem;
+  @include animate (opacity, 500ms)
+}
+
+.top-nav-link:hover {
+  opacity: 1;
+  color: #1a1a1a;
+  text-decoration: none;
+  @include animate (opacity, 500ms)
+}
+
+.call-now {
+  position: absolute;
+  background-color: #b48d2e;
+  top: 0px;
+  right: 3rem;
+  z-index: 3;
+  padding: 1rem;
+  opacity: 1;
+  @include animate (opacity, 1s);
+  p {
+    color: #ffffff;
+    text-align: center;
+  }
+
+  & .phone {
+    text-align: center;
+    color: #ffffff;
+    // margin: 0 auto;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 1252px){
+  .call-now {
+    opacity: 0;
+    @include animate (opacity, 1s);
+    z-index: 2;
+  }
+
+}
+//=========================================
+// Main Nav Bar
+
+#navbarSite {
+  position: absolute;
+  top: 4rem;
+  z-index: 2;
+}
+
+@media (max-width: 991px){
+  #navbarSite {
+    position: fixed;
+    top: 0.5rem;
+    z-index: 4
+  }
+
+}
+
+.nav-bar-logo {
+  width: 10rem;
+}
+
+div.navbar-nav a.nav-link {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  opacity: 1;
+  @include animate(opacity, 500ms);
+  &::after {
+    content: '';
+    color: #fff;
+    display: block;
+    height: 3px;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+div.navbar-nav a.nav-link:hover {
+  opacity: 0.6;
+  color: #1a1a1a;
+  @include animate(opacity, 500ms);
+}
+
+
+//=========================================
+//hamburger animation
+.nav-icon {
+  margin: 1em;
+  width: 40px;
+}
+
+.nav-icon div,
+.nav-icon:after,
+.nav-icon:before {
+  background-color: $onyx;
+  border-radius: 3px;
+  content: '';
+  display: block;
+  height: 5px;
+  margin: 7px 0;
+  @include animate (all, 400ms);
+
+  &:hover {
+    color: #000;
+  }
+}
+
+.x.nav-icon:before {
+  @include transform(translateY(12px) rotate(135deg));
+}
+
+.x.nav-icon:after {
+  @include transform(translateY(-12px) rotate(-135deg));
+}
+
+.x.nav-icon div {
+  @include transform(scale(0));
+}
+
+//=========================================
+//Carousel
+//
+
+#featuredImages {
+  //z-index: ;
+}
+
+.carousel-indicators li {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 100% !important;
+  background-color: #4a4a4a !important;
+  & .active {
+    background-color: #1a1a1a !important;
+  }
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  filter: invert(1);
+}
