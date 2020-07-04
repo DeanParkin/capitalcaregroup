@@ -78,11 +78,7 @@ header {
   justify-content: center;
   margin: 1rem auto 1rem auto;
 }
-@media (max-width: 991px) {
-  #topNav {
-    display: none;
-  }
-}
+
 
 .social-links {
   width: 10rem;
@@ -146,14 +142,7 @@ header {
   }
 }
 
-@media (max-width: 1252px){
-  .call-now {
-    opacity: 0;
-    @include animate (opacity, 1s);
-    z-index: 2;
-  }
 
-}
 //=========================================
 // Main Nav Bar
 
@@ -163,14 +152,6 @@ header {
   z-index: 2;
 }
 
-@media (max-width: 991px){
-  #navbarSite {
-    position: fixed;
-    top: 0.5rem;
-    z-index: 4
-  }
-
-}
 
 .nav-bar-logo {
   width: 10rem;
@@ -238,10 +219,6 @@ div.navbar-nav a.nav-link:hover {
 //Carousel
 //
 
-#featuredImages {
-  //z-index: ;
-}
-
 .carousel-indicators li {
   width: 10px !important;
   height: 10px !important;
@@ -255,4 +232,34 @@ div.navbar-nav a.nav-link:hover {
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
   filter: invert(1);
+}
+
+
+//#########################################
+// Header Responsive Breakpoints
+//#########################################
+
+@media (max-width: 991px){
+  #topNav {
+    display: none;
+  }
+
+  #navbarSite {
+    position: fixed;
+    top: 0.5rem;
+    z-index: 4
+  }
+
+  #featuredImages {
+    top: 6.5rem;
+    }
+}
+
+@media (max-width: 1252px){
+  .call-now {
+    opacity: 0;
+    @include animate (opacity, 1s);
+    z-index: 2;
+  }
+
 }

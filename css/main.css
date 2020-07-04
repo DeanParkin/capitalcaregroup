@@ -26,11 +26,6 @@ header {
   margin: 1rem auto 1rem auto;
 }
 
-@media (max-width: 991px) {
-  #topNav {
-    display: none;
-  }
-}
 .social-links {
   width: 10rem;
   min-height: 0.5rem;
@@ -111,30 +106,12 @@ header {
   font-size: 2rem;
 }
 
-@media (max-width: 1252px) {
-  .call-now {
-    opacity: 0;
-    -webkit-transition: opacity 1s ease;
-    -moz-transition: opacity 1s ease;
-    -ms-transition: opacity 1s ease;
-    -o-transition: opacity 1s ease;
-    transition: opacity 1s ease;
-    z-index: 2;
-  }
-}
 #navbarSite {
   position: absolute;
   top: 4rem;
   z-index: 2;
 }
 
-@media (max-width: 991px) {
-  #navbarSite {
-    position: fixed;
-    top: 0.5rem;
-    z-index: 4;
-  }
-}
 .nav-bar-logo {
   width: 10rem;
 }
@@ -232,6 +209,33 @@ div.navbar-nav a.nav-link:hover {
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
   filter: invert(1);
+}
+
+@media (max-width: 991px) {
+  #topNav {
+    display: none;
+  }
+
+  #navbarSite {
+    position: fixed;
+    top: 0.5rem;
+    z-index: 4;
+  }
+
+  #featuredImages {
+    top: 6.5rem;
+  }
+}
+@media (max-width: 1252px) {
+  .call-now {
+    opacity: 0;
+    -webkit-transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+    -ms-transition: opacity 1s ease;
+    -o-transition: opacity 1s ease;
+    transition: opacity 1s ease;
+    z-index: 2;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
