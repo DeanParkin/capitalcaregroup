@@ -250,6 +250,15 @@ div.navbar-nav a.nav-link:hover {
     z-index: 4
   }
 
+  .navbar-nav {
+    background-color: rgb( 20, 20, 20, 0.2);
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    & a {
+      text-align: center;
+    }
+  }
+
   #featuredImages {
     top: 6.5rem;
     }
