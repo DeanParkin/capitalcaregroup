@@ -227,12 +227,13 @@ div.navbar-nav a.nav-link:hover {
   }
 
   .navbar-nav {
-    background-color: rgba(20, 20, 20, 0.2);
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
     border-bottom-left-radius: 3%;
     border-bottom-right-radius: 3%;
   }
   .navbar-nav a {
-    text-align: center;
+    margin-left: 4px;
   }
 
   #featuredImages {
