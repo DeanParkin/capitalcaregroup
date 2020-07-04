@@ -146,6 +146,10 @@ div.navbar-nav a.nav-link:hover {
   transition: opacity 500ms ease;
 }
 
+.navbar-toggler {
+  border: none !important;
+}
+
 .nav-icon {
   margin: 1em;
   width: 40px;
