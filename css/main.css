@@ -224,8 +224,8 @@ div.navbar-nav a.nav-link:hover {
 
   .navbar-nav {
     background-color: rgba(20, 20, 20, 0.2);
-    border-bottom-left-radius: 20%;
-    border-bottom-right-radius: 20%;
+    border-bottom-left-radius: 3%;
+    border-bottom-right-radius: 3%;
   }
   .navbar-nav a {
     text-align: center;
