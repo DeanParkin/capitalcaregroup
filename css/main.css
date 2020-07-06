@@ -204,10 +204,10 @@ div.navbar-nav a.nav-link:hover {
   width: 10px !important;
   height: 10px !important;
   border-radius: 100% !important;
-  background-color: #4a4a4a !important;
+  background-color: rgba(20, 20, 20, 0.6) !important;
 }
 .carousel-indicators li .active {
-  background-color: #1a1a1a !important;
+  color: #141414 !important;
 }
 
 .carousel-control-next-icon,
@@ -215,20 +215,39 @@ div.navbar-nav a.nav-link:hover {
   filter: invert(1);
 }
 
+.carousel-indicators {
+  z-index: 2 !important;
+}
+
+.search-bar-whitespace {
+  margin-top: 10px;
+}
+.search-bar-whitespace label {
+  display: inline-block;
+}
+.search-bar-whitespace Input {
+  display: inline-block;
+}
+
 @media (max-width: 991px) {
   #topNav {
+    position: absolute;
+    top: 22rem;
+  }
+  #topNav .social-links {
     display: none;
   }
 
   #navbarSite {
     position: fixed;
-    top: 0.5rem;
+    top: 0;
     z-index: 4;
+    background-color: #fff;
   }
 
   .navbar-nav {
     width: 50%;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.5);
     border-bottom-left-radius: 3%;
     border-bottom-right-radius: 3%;
   }
@@ -237,7 +256,7 @@ div.navbar-nav a.nav-link:hover {
   }
 
   #featuredImages {
-    top: 6.5rem;
+    top: 5.75rem;
   }
 }
 @media (max-width: 1252px) {

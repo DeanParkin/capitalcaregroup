@@ -19,6 +19,7 @@ $mainFont: 'Noto Sans', sans-serif;
 //#########################################
 // Mixins
 //#########################################
+
 @mixin animate ($attr, $time) {
   -webkit-transition: $attr $time ease;
   -moz-transition: $attr $time ease;
@@ -58,12 +59,9 @@ $mainFont: 'Noto Sans', sans-serif;
 // Global
 //#########################################
 
-
 header {
   font-family: $mainFont
 }
-
-
 
 
 //#########################################
@@ -182,6 +180,7 @@ div.navbar-nav a.nav-link:hover {
 
 //=========================================
 //hamburger animation
+
 .navbar-toggler {
   border: none !important;
 }
@@ -221,15 +220,14 @@ div.navbar-nav a.nav-link:hover {
 
 //=========================================
 //Carousel
-//
 
 .carousel-indicators li {
   width: 10px !important;
   height: 10px !important;
   border-radius: 100% !important;
-  background-color: #4a4a4a !important;
+  background-color: rgb(20,20,20,0.6) !important;
   & .active {
-    background-color: #1a1a1a !important;
+    color: rgb(20,20,20,1) !important;
   }
 }
 
@@ -238,25 +236,51 @@ div.navbar-nav a.nav-link:hover {
   filter: invert(1);
 }
 
+.carousel-indicators {
+  z-index: 2 !important;
+}
+
+
+//=========================================
+//Search Bar
+
+.search-bar-whitespace {
+  margin-top: 10px;
+  & label {
+    display: inline-block;
+  }
+  & Input {
+    display: inline-block;
+  }
+}
+
 
 //#########################################
 // Header Responsive Breakpoints
 //#########################################
 
+//lg breakpoint
 @media (max-width: 991px){
   #topNav {
-    display: none;
+    position: absolute;
+    top: 22rem;
+
+    & .social-links {
+      display: none;
+    }
   }
+
 
   #navbarSite {
     position: fixed;
-    top: 0.5rem;
-    z-index: 4
+    top: 0;
+    z-index: 4;
+    background-color: #fff;
   }
 
   .navbar-nav {
     width: 50%;
-    background-color: rgb( 255, 255, 255, 0.4);
+    background-color: rgb( 255, 255, 255, 0.5);
     border-bottom-left-radius: 3%;
     border-bottom-right-radius: 3%;
     & a {
@@ -265,10 +289,11 @@ div.navbar-nav a.nav-link:hover {
   }
 
   #featuredImages {
-    top: 6.5rem;
+    top: 5.75rem;
     }
 }
 
+//xl breakpoint
 @media (max-width: 1252px){
   .call-now {
     opacity: 0;
